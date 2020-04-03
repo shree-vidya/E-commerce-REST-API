@@ -121,7 +121,7 @@ router.patch('/:productId',  checkAuth,(req,res,next) => {
             error: err
         })
     })
-})
+})  
 
 router.delete('/:productId', checkAuth,(req,res,next) => {
    const id = req.params.productId;
