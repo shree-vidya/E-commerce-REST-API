@@ -7,14 +7,13 @@
 
 * User should Signup using his email and password.
 
-* User with an account can Login and he gets a authorization token which is active for 2 hour. He should login again after this expires.
+* User with an account can Login and he gets an authorization token which is active for 2 hour. He should login again after this expires.
 
 * User can view, add, edit or delete products.
 
-* One can order any of the exciting product with required quantity.
+* One can order any of the exsisting product with required quantity.
 
 * User can view or delete his orders.
-
 
 ### Features
 
