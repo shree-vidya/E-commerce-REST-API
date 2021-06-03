@@ -36,11 +36,6 @@
 * ```{url}/user/login```
 
   * Request type - **POST**
-
-  * Header 
-  ```
-  authorization : token
-  ```
   
   * Body 
     ```json
@@ -71,6 +66,98 @@
     {
       "message" : "User deleted"
     }
+    ```
+### Products Route
+
+* ```{url}/products```
+
+  * Request type - **GET**
+  
+  * Header 
+  ```
+  authorization : token
+  ```
+  
+  * Response Status - 200
+  
+  * Response
+    ```json
+    {
+      "count": 1,
+      "products": [
+          {
+              "name": "Harry potter 3",
+              "price": 9.36,
+              "_id": "5e825ce3848c9332344c3182",
+              "request": {
+                  "type": "GET",
+                  "url": "{url}/products/5e825ce3848c9332344c3182"
+              }
+          }
+        ]
+    }
+    ```
+
+* ```{url}/products```
+
+  * Request type - **POST**
+  
+  * Header 
+  ```
+  authorization : token
+  ```
+
+  * Body 
+    ```json
+    {
+      "name" : "Chocolates",
+      "price" : "15"
+    }
+    ```
+  
+  * Response Status - 201
+  
+  * Response
+    ```json
+    {
+      "message": "Created product successfully!",
+      "createdProduct": {
+          "name": "Chocolates",
+          "price": 15,
+          "_id": "60b85bf62972e44f042025fe",
+          "request": {
+              "type": "GET",
+              "url": "{url}/products/60b85bf62972e44f042025fe"
+          }
+        }
+    }
+    ```
+* ```{url}/products/:productId```
+
+  * Request type - **GET**
+  
+  * Header 
+  ```
+  authorization : token
+  ```
+  
+  * Response Status - 200
+  
+  * Response
+    ```json
+    {
+      "product": {
+          "_id": "5e825ce3848c9332344c3182",
+          "name": "Harry potter 3",
+          "price": 9.36
+      },
+      "request": {
+          "type": "GET",
+          "description": "Get all products",
+          "url": "{url}/products"
+      }
+    }
+
     ```
 
 
