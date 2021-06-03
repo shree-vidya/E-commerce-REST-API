@@ -59,6 +59,11 @@
 
   * Request type - DELETE
 
+  * Header 
+  ```
+  authorization : token
+  ```
+
   * Response Status - 200
   
   * Response
@@ -67,6 +72,7 @@
       "message" : "User deleted"
     }
     ```
+
 ### Products Route
 
 * ```{url}/products```
@@ -132,6 +138,7 @@
         }
     }
     ```
+
 * ```{url}/products/:productId```
 
   * Request type - GET
@@ -158,9 +165,45 @@
       }
     }
     ```
+
+* ```{url}/products/:productId```
+
+  * Request type - PATCH
+  
+  * Header 
+  ```
+  authorization : token
+  ```
+
+  * Body 
+    ```json
+    {
+      "name" : "Harry potter 3",
+      "price" : "12.45"
+    }
+    ```
+  
+  * Response Status - 200
+  
+  * Response
+    ```json
+    {
+      "message": "Product updated",
+      "request": {
+          "type": "GET",
+          "url": "{url}/products/5e825ce3848c9332344c3182"
+        }
+    }
+    ```
+
 * ```{url}/products/:productId```
 
   * Request type - DELETE
+
+  * Header 
+  ```
+  authorization : token
+  ```
 
   * Response Status - 200
   
@@ -178,7 +221,7 @@
         }
     }
     ```
-    
+
 ### Orders Route
 
 * ```{url}/orders```
@@ -284,6 +327,11 @@
 * ```{url}/orders/:orderId```
 
   * Request type - DELETE
+
+  * Header 
+  ```
+  authorization : token
+  ```
 
   * Response Status - 200
   
