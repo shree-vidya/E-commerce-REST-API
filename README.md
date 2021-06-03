@@ -14,7 +14,7 @@
 
 * ```{url}/user/signup```
 
-  * Request type - **POST**
+  * Request type - POST
   
   * Body 
     ```json
@@ -35,7 +35,7 @@
   
 * ```{url}/user/login```
 
-  * Request type - **POST**
+  * Request type - POST
   
   * Body 
     ```json
@@ -57,7 +57,7 @@
   
 * ```{url}/:userId```
 
-  * Request type - **DELETE**
+  * Request type - DELETE
 
   * Response Status - 200
   
@@ -71,7 +71,7 @@
 
 * ```{url}/products```
 
-  * Request type - **GET**
+  * Request type - GET
   
   * Header 
   ```
@@ -100,7 +100,7 @@
 
 * ```{url}/products```
 
-  * Request type - **POST**
+  * Request type - POST
   
   * Header 
   ```
@@ -134,7 +134,7 @@
     ```
 * ```{url}/products/:productId```
 
-  * Request type - **GET**
+  * Request type - GET
   
   * Header 
   ```
@@ -157,7 +157,149 @@
           "url": "{url}/products"
       }
     }
+    ```
+* ```{url}/products/:productId```
 
+  * Request type - DELETE
+
+  * Response Status - 200
+  
+  * Response
+    ```json
+    {
+      "message": "Product deleted",
+      "request": {
+          "type": "POST",
+          "url": "{url}/products",
+          "body": {
+              "name": "String", 
+              "price": "Number"
+          }
+        }
+    }
+    ```
+    
+### Orders Route
+
+* ```{url}/orders```
+
+  * Request type - GET
+  
+  * Header 
+  ```
+  authorization : token
+  ```
+  
+  * Response Status - 200
+  
+  * Response
+    ```json
+    {
+      "count": 1,
+      "orders": [
+          {
+              "_id": "5e82dffc061e3828b8291c21",
+              "product": {
+                  "_id": "5e825ce3848c9332344c3182",
+                  "name": "Harry potter 3"
+              },
+              "quantity": 2,
+              "request": {
+                  "type": "GET",
+                  "url": "{url}/orders/5e82dffc061e3828b8291c21"
+              }
+          },
+        ]
+    }
+
+    ```
+
+* ```{url}/orders```
+
+  * Request type - POST
+  
+  * Header 
+  ```
+  authorization : token
+  ```
+
+  * Body 
+    ```json
+    {
+      "productId" : "5e825ce3848c9332344c3182",
+      "quantity" : "9"
+    }
+    ```
+  
+  * Response Status - 201
+  
+  * Response
+    ```json
+    {
+       "message": "Order stored",
+            "createdOrder": {
+                "_id": "60b87ee712975e2360f9dee0",
+                "product": "5e825ce3848c9332344c3182",
+                "quantity": "9"
+            },
+            "request": {
+                "type": "GET",
+                "url": "{url}/orders/' + 5e825ce3848c9332344c3182"
+            }
+    }
+    ```
+
+* ```{url}/orders/:orderId```
+
+  * Request type - GET
+  
+  * Header 
+  ```
+  authorization : token
+  ```
+  
+  * Response Status - 200
+  
+  * Response
+    ```json
+    {
+      "order": {
+          "quantity": 2,
+          "_id": "5e82dffc061e3828b8291c21",
+          "product": {
+              "_id": "5e825ce3848c9332344c3182",
+              "name": "Harry potter 3",
+              "price": 9.36,
+              "__v": 0
+          },
+          "__v": 0
+      },
+      "request": {
+          "type": "GET",
+          "url": "http://localhost:3000/orders"
+      }
+    }
+    ```
+
+* ```{url}/orders/:orderId```
+
+  * Request type - DELETE
+
+  * Response Status - 200
+  
+  * Response
+    ```json
+    {
+      "message": "Order deleted",
+      "request": {
+          "type": "POST",
+          "url": "{url}/orders",
+          "body": {
+              "productId": "ID",
+              "quantity": "Number"
+          }
+        }
+    }
     ```
 
 
