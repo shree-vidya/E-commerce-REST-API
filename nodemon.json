@@ -1,5 +1,5 @@
-{
-    "env": {
-        "JWT_KEY": "secret"
-    }
-}
+// {
+//     "env": {
+//         "JWT_KEY": "secret"
+//     }
+// }
