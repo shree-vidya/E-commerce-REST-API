@@ -1,8 +1,22 @@
 
-# E-Commerce-REST-Api
-> This is an E-Commerce REST Api where user can make purchases of different range of products.
+# E-Commerce-REST-API
 
-## Features
+> This is an E-Commerce REST API that can be used for any kind of product selling based application or website.
+
+## Description
+
+* User should Signup using his email and password.
+
+* User with an account can Login and he gets a authorization token which is active for 2 hour. He should login again after this expires.
+
+* User can view, add, edit or delete products.
+
+* One can order any of the exciting product with required quantity.
+
+* User can view or delete his orders.
+
+
+### Features
 * System architecture – MVC architecture.
 * Backend server environment – Node.js
 * Backend Framework – Express
@@ -319,7 +333,7 @@
       },
       "request": {
           "type": "GET",
-          "url": "http://localhost:3000/orders"
+          "url": "{url}/orders"
       }
     }
     ```
@@ -352,20 +366,25 @@
 
 
 ## SetUp
+
 * Install Node.js
+
 * Clone Git repository into desired location on your device.
 ```
 git clone https://github.com/Shivanirao2000/E-Commerce-REST-Api.git
 cd E-Commerce-REST-Api
 ```
+
 * Install the required dependencies
 ```
  npm init
  npm install express express-session body-parser ejs method-override --save
  npm install mongoose passport passport-local passport-local-mongoose --save
  ```
+
  * Run Node.js server
  ```
  node server.js
  ```
+
  * The api can be opened on any browser or Postman using [http://localhost:3000](http://localhost:3000)

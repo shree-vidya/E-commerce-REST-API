@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const morgan = require('morgan')
@@ -5,12 +6,12 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 
-const productRoutes = require('./ap1/routes/products')
-const orderRoutes = require('./ap1/routes/orders')
-const userRoutes = require('./ap1/routes/user')
+const productRoutes = require('./src/routes/products')
+const orderRoutes = require('./src/routes/orders')
+const userRoutes = require('./src/routes/user')
 
 
-mongoose.connect("mongodb+srv://vibhasuma:mypetjimmy@cluster0-afupk.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://vibhasuma:"+process.env.MONGO_DB_PASSWORD+"@cluster0-afupk.mongodb.net/test?retryWrites=true&w=majority", {
 	useUnifiedTopology: true,
 	useNewUrlParser: true,
 	useCreateIndex: true
