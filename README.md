@@ -17,20 +17,21 @@
   * Request type - **POST**
   
   * Body 
-  ```json
-  {
-    "email" : "email@abc.com",
-    "password" : "password"
-  }
-  ```
+    ```json
+    {
+      "email" : "email@abc.com",
+      "password" : "password"
+    }
+    ```
   
   * Response Status - 201
   
   * Response
-  ```json
-  {
-    "message": "User created"
-  }
+    ```json
+    {
+      "message": "User created"
+    }
+    ```
   
 * ```{url}/user/login```
 
@@ -42,22 +43,22 @@
   ```
   
   * Body 
-  ```json
-  {
-    "email" : "email@abc.com",
-    "password" : "password"
-  }
-  ```
+    ```json
+    {
+      "email" : "email@abc.com",
+      "password" : "password"
+    }
+    ```
   
   * Response Status - 200
   
   * Response
-  ```json
-  {
-    "message": "Auth successful",
-    "token": "token"
-  }
-  ```
+    ```json
+    {
+      "message": "Auth successful",
+      "token": "token"
+    }
+    ```
   
 * ```{url}/:userId```
 
@@ -66,11 +67,11 @@
   * Response Status - 200
   
   * Response
-  ```json
-  {
-    "message" : "User deleted"
-  }
-  ```
+    ```json
+    {
+      "message" : "User deleted"
+    }
+    ```
 
 
 ## SetUp
