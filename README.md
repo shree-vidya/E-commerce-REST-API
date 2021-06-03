@@ -10,6 +10,8 @@
 
 ## Routes
 
+### Authentication Routes
+
 * ```{url}/user/signup```
 
   * Request type - **POST**
@@ -17,8 +19,8 @@
   * Body 
   ```json
   {
-    "email" : "hmshreevidya@gmail.com",
-    "password" : "jimmy"
+    "email" : "email@abc.com",
+    "password" : "password"
   }
   ```
   
@@ -29,6 +31,47 @@
   {
     "message": "User created"
   }
+  
+* ```{url}/user/login```
+
+  * Request type - **POST**
+
+  * Header 
+  ```
+  authorization : token
+  ```
+  
+  * Body 
+  ```json
+  {
+    "email" : "email@abc.com",
+    "password" : "password"
+  }
+  ```
+  
+  * Response Status - 200
+  
+  * Response
+  ```json
+  {
+    "message": "Auth successful",
+    "token": "token"
+  }
+  ```
+  
+* ```{url}/:userId```
+
+  * Request type - **DELETE**
+
+  * Response Status - 200
+  
+  * Response
+  ```json
+  {
+    "message" : "User deleted"
+  }
+  ```
+
 
 ## SetUp
 * Install Node.js
