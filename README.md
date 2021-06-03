@@ -1,5 +1,5 @@
 
-# E-Commerce-REST-API
+# E-Commerce REST API
 
 > This is an E-Commerce REST API that can be used for any kind of product selling based application or website.
 
@@ -17,10 +17,14 @@
 
 
 ### Features
-* System architecture – MVC architecture.
-* Backend server environment – Node.js
-* Backend Framework – Express
-* Database - MongoDB
+
+* System architecture – **MVC architecture**
+
+* Backend server environment – **Node.js**
+
+* Backend Framework – **Express**
+
+* Database - **MongoDB**
 
 ## Routes
 
@@ -371,15 +375,15 @@
 
 * Clone Git repository into desired location on your device.
 ```
-git clone https://github.com/Shivanirao2000/E-Commerce-REST-Api.git
-cd E-Commerce-REST-Api
+git clone https://github.com/shree-vidya/E-commerce-REST-API.git
+cd E-commerce-REST-API
 ```
 
 * Install the required dependencies
 ```
  npm init
- npm install express express-session body-parser ejs method-override --save
- npm install mongoose passport passport-local passport-local-mongoose --save
+ npm install express express-session body-parser ejs jsonwebtoken bcrypt --save
+ npm install mongoose morgan multer dotenv method-override --save
  ```
 
  * Run Node.js server
@@ -387,4 +391,4 @@ cd E-Commerce-REST-Api
  node server.js
  ```
 
- * The api can be opened on any browser or Postman using [http://localhost:3000](http://localhost:3000)
+ * The API can be opened on any browser or Postman using [http://localhost:3000](http://localhost:3000)
