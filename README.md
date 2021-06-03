@@ -73,7 +73,7 @@
     }
     ```
 
-### Products Route
+### Product Routes
 
 * ```{url}/products```
 
@@ -222,7 +222,7 @@
     }
     ```
 
-### Orders Route
+### Order Routes
 
 * ```{url}/orders```
 
